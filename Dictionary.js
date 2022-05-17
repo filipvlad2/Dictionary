@@ -1,10 +1,7 @@
 let Dictionary = new Array();
 
 function adaugareCuvant() {
-	Dictionary.push($('#saveWord').val() + ' ');
-	//Clears the text box and prevents from reloading
-	event.preventDefault(); 
-	$('#saveWord').val() = '';
+	Dictionary.push($('#saveWord').val() + ' '); 
 	return false;
 }
 
