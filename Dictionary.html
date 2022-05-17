@@ -20,12 +20,12 @@
             <form>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Enter the word to be saved in the dictionary</label>
-                <input class="form-control" id="saveWord">
+                <input class="form-control" onfocus= "this.value='' " id="saveWord">
                 <button type="submit" class="btn btn-primary" onclick= "return adaugareCuvant();">SAVE</button>
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Search for a word in the dictionary</label>
-                <input class="form-control" id="searchWord">
+                <input class="form-control" onfocus= "this.value='' " id="searchWord">
               </div>
               <button type="submit" class="btn btn-primary" onclick= "return cautareCuvant();">SEARCH</button>
             </form>
