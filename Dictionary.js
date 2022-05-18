@@ -1,25 +1,16 @@
-let Dictionary = new Array();
+let dictionary = new Array();
 
 function adaugareCuvant() {
-	Dictionary.push($('#saveWord').val() + ' '); 
+	let currentSave = document.getElementById('saveWord').value;
+	dictionary.push(currentSave); 
 	return false;
 }
 
 function cautareCuvant() {
-	let currentSearch = $('#searchWord').val();
-	let wordFound;
-	for (let i = 0; i < Dictionary.length; i++) {
-		let result = Dictionary[i].match(currentSearch);
-		if (result != null) {
-			wordFound = 1;
-			break;
-		} else {
-			wordFound = 0;
-		}
-	}
-	if (wordFound == 1) {
+	let currentSearch = document.getElementById('searchWord').value;
+	if (dictionary.includes(currentSearch)) {
 		alert("Word found!");
-	}else {
+	} else {
 		alert("Word not found!");
 	}
 	return false;
